@@ -1,3 +1,5 @@
+import { MazeSelectType, SpeedSelectType } from "./types";
+
 export const MAX_ROWS = 39;
 export const MAX_COLS = 49;
 
@@ -32,3 +34,15 @@ export const END_TILE_STYLE = TILE_STYLE + " bg-red-600";
 export const WALL_TILE_STYLE = TILE_STYLE + " bg-gray-200";
 export const PATH_TILE_STYLE = TILE_STYLE + " bg-green-600";
 
+export const MAZES: MazeSelectType[] = [
+    { name: "No Maze", value: "NONE" },
+    { name: "Binary Tree", value: "BINARY TREE" },
+    { name: "Recursive Division", value: "RECURSIVE_DIVISION" },
+]
+    
+export const SPEEDS: SpeedSelectType[] = [
+    { name: 'slow', value: 2 },
+    { name: ';medium', value: 1 },
+    {name:'fast',value:2}
+    
+]

@@ -31,7 +31,7 @@ export const createGrid = (startTile: TileType, endTile: TileType) => {
 export const checkIfStartOrEnd = (row: number, col: number) => {
     return (row===1 && col===1 || (row===MAX_ROWS-2 && col===MAX_COLS-2))
 }
-export const createNewGrid = (grid: GridType, row: number, col: number)=>{
+export const createNewGrid = (grid: GridType, row: number, col: number) => {
     //wew are creating shallow copy of grid not want to mutate original grid
     const newGrid = grid.slice();
     const newTile = {
@@ -41,4 +41,14 @@ export const createNewGrid = (grid: GridType, row: number, col: number)=>{
     }
     newGrid[row][col] = newTile;
     return newGrid;
+};
+export const isEqual = (a: TileType, b: TileType)=>{
+    return (a.row === b.row && a.col === b.col); 
+}
+
+export const isRowEqual = (row: number,col:number, tile: TileType) => {
+    return (row === tile.row && col=== tile.col);
+}
+export const sleep = (ms: number) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
